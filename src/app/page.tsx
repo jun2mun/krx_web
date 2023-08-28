@@ -1,95 +1,108 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+/*@jsxImportSource @emotion/react */
+'use client'
+
+import { css } from "@emotion/react";
+
+const Navbar = () => (
+  <div css = {css({
+    position : 'fixed',
+    width: '100%',
+    background : 'red'
+  })}>
+    h
+  </div>
+)
+
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <>
+      {/* nav bar*/}
+      <div css = {css({
+          position : 'fixed',
+          width: '100%',
+          display : 'flex',
+          borderBottom : 'solid'
+        })}>
+          <div css = {css({
+            backgroundImage : `url("logo.png")`,
+            width: '115px',
+            height : '45px',
+            backgroundRepeat : 'no-repeat',
+            backgroundSize : 'contain',
+          })}>
+          </div>
+          <div css = {css({
+            fontSize : '28px',
+            fontStyle : 'bold',
+            color : 'white'
+          })}>
+            REITs 포털
+          </div>
+      </div>
+      
+      <div css = {css({
+          backgroundImage : `url("main_background.png")`,
+          backgroundRepeat : 'no-repeat',
+          backgroundSize : 'cover',
+          width: '100%',
+          height : '100%',
+        })}>
+          <div css = {css({
+            width: '100%',
+            height : '50px',
+            backgroundColor : 'black'
+          })}>
+
+          </div>
+          <div css = {css({
+            color : 'white'
+          })}>
+            <div>미래를 위한 또 하나의 투자 REITs</div>
+            <div>KRX가 함께 합니다</div>
+          </div>
+
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div css = {css({
+          backgroundImage : `url("main2.png")`,
+          backgroundRepeat : 'no-repeat',
+          backgroundSize : 'cover',
+          width: '100%',
+          height : '250%',
+        })}>
+
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      {/* BOOTOM bar*/}
+      <div css = {css({
+          width: '100%',
+          display : 'flex',
+          position : 'relative',
+          top : '-100px',
+          height : '0px',
+          
+        })}>
+          <div css = {css({
+            backgroundColor : 'gray',
+            width : '100%',
+            height : '150px'
+          })}>
+            <div css = {css({
+              backgroundImage : `url("logo.png")`,
+              width: '100px',
+              height : '100px',
+              backgroundRepeat : 'no-repeat',
+              backgroundSize : 'contain',
+            })}>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+            </div>
+          </div>
       </div>
-    </main>
+
+    </>
+
+    
+
   )
 }
